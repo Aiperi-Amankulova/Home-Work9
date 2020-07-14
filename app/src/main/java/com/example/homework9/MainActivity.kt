@@ -17,15 +17,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initView()
-
+        setupSpinner()
     }
     private fun initView() {
       spInFirstActivity = findViewById<Spinner>(R.id.spInFirstActivity)
       tvInFirstActivity = findViewById<TextView>(R.id.tvInFirstActivity)
     }
 
+   private fun setupSpinner() {
+        val adapter =  ArrayAdapter.createFromResource(this, R.array.cities, android.R.layout.simple_spinner_item)
 
-   }
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spInFirstActivity?.adapter = adapter
+    }
+
 
 
     }
