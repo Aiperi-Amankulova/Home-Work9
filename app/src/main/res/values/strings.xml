@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Home Work №9</string>
+    <string-array name="cities">
+        <item>Select city</item>
+        <item>Tauranga</item>
+        <item>Lakhimpur</item>
+        <item> Unnao</item>
+        <item>Saga</item>
+        <item>Picine</item>
+        <item>Naney</item>
+        <item>Changping</item>
+        <item>Lubao</item>
+        <item>Bratsk</item>
+        <item>Tulock</item>
+    </string-array>
 </resources>
