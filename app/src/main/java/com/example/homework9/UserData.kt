@@ -9,7 +9,7 @@ data class UserData(
     val lakhimpur: String,
     val unnao: String,
     var saga: String,
-    val pikine: Int,
+    val pikine: String,
     val naney: String,
     var changping: String,
     var lubao: String,
