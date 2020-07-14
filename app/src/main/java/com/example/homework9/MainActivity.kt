@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         initView()
         setupSpinner()
+        goToTextView()
     }
     private fun initView() {
       spInFirstActivity = findViewById<Spinner>(R.id.spInFirstActivity)
@@ -30,7 +31,18 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spInFirstActivity?.adapter = adapter
     }
+   private fun goToTextView() {
+          spInFirstActivity?.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+         override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
 
+                parent.getItemAtPosition(position).toString()
+             val selectedItem = parent.getItemAtPosition(position).toString()
+             tvInFirstActivity?.text= selectedItem.toString()
+         }
+
+              override fun onNothingSelected(parent: AdapterView<*>?) {}
+          }
+   }
 
 
     }
